@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "chart.js": "^3.4.0",
+    "konva": "^8.0.4",
+    "tinycolor2": "^1.4.2"
+  }
+}

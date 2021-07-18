@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Manipulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>John Doe</h1>
+    <div>
+        <img id="img-grading" src="./image2.png" style="width:650px; height:650px">
+    </div>
+    <div id="column" style="display:flex; flex-direction:column;">
+        <lable>Hue:</lable>
+        <input type="range" id="h" min="-180" max="180" value="0" oninput="setColorFromHsl()">
+        <lable>Saturation:</lable>
+        <input type="range" id="s" min="0" max="100" value="0" oninput="setColorFromHsl()">
+        <lable>Brightness:</lable>
+        <input type="range" id="l" min="0" max="100" value="0" oninput="setColorFromHsl()">
+        <button style="margin-top:10px;" onclick="imageTransform()">Click Me!</button>
+        <div id="preview"></div>
+    </div>
+    <div>
+        <label for="Rval">Red</label>
+        <input type="number" id='Rval' step=0.1 value=1 oninput="setValue()">
+        <label for="Gval">Green</label>
+        <input type="number" id='Gval' step=0.1 value=1 oninput="setValue()">
+        <label for="Bval">Blue</label>
+        <input type="number" id='Bval' step=0.1 value=1 oninput="setValue()">
+    </div>
+    <div>
+        <button onclick="resetImage()">Reset</button>
+        <button onclick="rgbImageTransform()">Transform</button>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
